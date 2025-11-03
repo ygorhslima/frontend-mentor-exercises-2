@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --Blue950: hsl(256, 26%, 20%);
+    --Blue500: hsl(216, 30%, 68%);
+    --Gray950: hsl(270, 9%, 17%);
+    --Gray700: hsl(273, 4%, 51%);
+    --Gray50: hsl(0, 0%, 98%);
+    --title-font: "DM Serif Display", serif;
+    --body-font:"Karla", sans-serif;
+}
+
+h1, h2, h3, h4,h5,h6{
+    font-family: var(--title-font);
+}
+body{
+    font-family: var(--body-font);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--Gray700);
+    margin: 4px;
+    gap: 5px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+header nav a:hover{
+    color: var(--Blue950);
+}
+header nav .link-plans{
+    border: 1px solid black;
+    padding: 10px 30px;
+    color: var(--Blue950);
+}
+header nav .link-plans:hover{
+    background-color: var(--Gray950);
+    color: var(--Gray50);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 14% 1fr 0.3fr;
+    grid-auto-flow: 1fr;
+}
+
+#section_intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background: var(--Blue950) url('images/bg-pattern-intro-right-desktop.svg') no-repeat;
+    background-position: top right;
+    color: var(--Gray50);
+}
+#section_intro .content{
+    width: 30%;
+    margin: 20px;
+}
+#section_intro .content hr{
+    width: 20%;
+}
+#section_intro .content h1{
+    font-size: 4.3em;
+}
+#section_intro .content p{
+    line-height: 1.6em;
+    font-size: 1.5em;
+}
+
+.link-white{
+    display: block;
+    transition: 0.8s;
+    border: 1px solid var(--Gray50);
+    padding: 10px 20px;
+    margin: 15px 0px;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--Gray50);
+    text-transform: uppercase;
+}
+.link-white:hover{
+    background-color: var(--Gray50);
+    color: var(--Gray950);
+}
+#section_intro .img{
+    position: relative;
+    top: 5%;
+}
+
+.img-lines-1{
+    position: absolute;
+    top: 50%;
+}
+
+#section_advantage{
+    grid-area: 3/1/4/-1;
+}
+#section_advantage .content_advantage{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#section_advantage h1{
+    font-size: 3.9em;
+}
+#section_advantage .advantages{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 5% 0px;
+    padding: 10px;
+}
+#section_advantage .advantages
+.advantages_item{
+    font-size: 1.7em;
+}
+#section_advantage #article_find-out{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin: 30px;
+    background: var(--Blue950) url('images/bg-pattern-how-we-work-desktop.svg') no-repeat;
+    background-position: center right;
+    height: 200px;
+    color: var(--Gray50);
+    width: 90%;
+}
+#section_advantage #article_find-out h2{
+    font-size: 2.6em;
+}
+#section_advantage #article_find-out a{
+ width: 10%;   
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Gray50);
+    padding: 20px;
+    background: url('images/bg-pattern-footer-desktop.svg') no-repeat;
+    margin: 20px;
+}
+footer hr{
+    width: 98%;
+}
+footer .logo-footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+}
+
+footer .content-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+footer .content-footer .links-footer{
+    display: flex;
+    flex-direction: column;
+}
