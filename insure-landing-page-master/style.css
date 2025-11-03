@@ -170,6 +170,11 @@ footer .logo-footer{
     gap: 10px;
     padding: 20px;
 }
+footer .logo-footer .social a{
+    text-decoration: none;
+    margin: 0px 5px;
+    transition: 0.8s;
+}
 
 footer .content-footer{
     display: flex;
@@ -181,4 +186,19 @@ footer .content-footer{
 footer .content-footer .links-footer{
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
+}
+footer .content-footer .links-footer h4{
+    color: var(--Gray700);
+    margin: 20px 0px;
+}
+footer .content-footer .links-footer a{
+    text-decoration: none;
+    color: var(--Gray950);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer .content-footer .links-footer a:hover{
+    text-decoration: underline;
 }
