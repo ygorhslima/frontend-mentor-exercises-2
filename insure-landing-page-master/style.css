@@ -239,6 +239,10 @@ footer .content-footer .links-footer a:hover{
         width: 60%;
     }
 
+    #section_intro .content div a{
+        width: 100%;
+    }
+
     
     .advantages, .advantages_item{
         display: flex;
