@@ -12,12 +12,16 @@
     <div>
       <img src="images/logo.svg" alt="logo">
     </div>
-    <nav>
-      <a href="#">How we work</a>
-      <a href="#">Blog</a>
-      <a href="#">Account</a>
-      <a href="#" class="link-plans">View plans</a>
-    </nav>
+    <div id="menu">
+      <div class="link"><a href="#">How we work</a></div>
+      <div class="link"><a href="#">Blog</a></div>
+      <div class="link"><a href="#">Account</a></div>
+      <div class="link"><a href="#" class="link-plans">View plans</a></div>
+    </div>
+
+    <button class="btn_menu">
+      <img src="images/icon-hamburger.svg" alt="">
+    </button>
   </header>
 
   <main>
@@ -135,5 +139,13 @@
         </div>
       </div>
   </footer>
+  <script>
+    // para que o menu apareça, eu tenho que usar o seletor de classe do elemento para aparecer, também seria bom utilizar o método toggle para que quando clicar no botão, aparece o menu
+    const btn_menu = document.querySelector(".btn_menu");
+    btn_menu.addEventListener("click",(evt)=>{
+      let menu = document.getElementById("menu")
+      menu.classList.toggle("ativo")
+    })
+  </script>
 </body>
 </html>

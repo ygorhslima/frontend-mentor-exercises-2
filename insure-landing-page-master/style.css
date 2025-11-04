@@ -28,10 +28,14 @@ body{
 
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin: 20px;
 }
-header nav a{
+header #menu{
+    display: flex;
+}
+header div a{
     text-decoration: none;
     color: var(--Gray700);
     margin: 4px;
@@ -39,15 +43,15 @@ header nav a{
     transition: 0.8s;
     cursor: pointer;
 }
-header nav a:hover{
+header div a:hover{
     color: var(--Blue950);
 }
-header nav .link-plans{
+header div .link-plans{
     border: 1px solid black;
     padding: 10px 30px;
     color: var(--Blue950);
 }
-header nav .link-plans:hover{
+header div .link-plans:hover{
     background-color: var(--Gray950);
     color: var(--Gray50);
 }
@@ -203,11 +207,63 @@ footer .content-footer .links-footer a:hover{
     text-decoration: underline;
 }
 
+.btn_menu{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
 
 @media screen and (max-width:768px) {
-    header{
-
+    header #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        z-index: 100;
+        top: 8%;
+        left: 0%;
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        background-color: var(--Blue950);
+        transition: 0.8s;
     }
+
+    /* Antes estava assim:
+    .ativo {
+    display: none;
+    transition: 0.8s;
+    }
+    */
+
+    header #menu {
+        display: none;
+    }
+
+    header #menu.ativo {
+        display: flex;
+    }
+
+   
+    header #menu .link a{
+        color: var(--Gray50);
+        font-size: 2.4em;
+    }
+    header #menu .link .link-plans{
+        color: var(--Gray50);
+        border: 3px solid var(--Gray50);
+    }
+    header #menu .link .link-plans:hover{
+        background-color: var(--Gray50);
+        color: var(--Gray950);
+    }
+
+    .btn_menu{
+        display: block;
+    }
+   
     main{
         display: flex !important;
         flex-direction: column !important;
@@ -221,7 +277,12 @@ footer .content-footer .links-footer a:hover{
     }
     #section_intro .img{
         z-index: 1;
+    }
+    #section_intro .img img{
         object-fit: cover;
+        display: block;
+        width: 100%;
+        height: 100%;
     }
     #section_intro .content{
         display: flex;
