@@ -168,3 +168,20 @@ main .simplify-how{
 main .simplify-how h1{
 
 }
+
+footer{
+    display: flex;
+    background-color: var(--Gray950);
+    justify-content: space-between;
+    padding: 40px;
+    text-decoration: none;
+    color: var(--Gray50);
+}
+footer .logo-container .social i{
+    text-decoration: none;
+    color: var(--Gray50);
+}
+footer .footer-links div a{
+    text-decoration: none;
+    color: var(--Gray50);
+}
