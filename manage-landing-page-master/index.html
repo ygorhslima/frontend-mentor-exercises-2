@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Frontend Mentor | Manage landing page</title>
 </head>
 <body>
 
   <header>
-    <img src="images/logo.svg" alt="logo">
+    <div>
+      <img src="images/logo.svg" alt="logo">
+    </div>
     <div class="div-links">
       <a href="#" class="links">Pricing</a>
       <a href="#" class="links">Product</a>
@@ -18,9 +22,9 @@
       <a href="#" class="links">Careers</a>
       <a href="#" class="links">Community</a>
     </div>  
-    <button class="btn_get-started">Get Started</button>
+    <button class="btn_get-started btn1">Get Started</button>
   </header>
-
+  
   <main>
     <section id="intro">
       <article class="intro-content">
@@ -29,7 +33,7 @@
           Manage makes it simple for software teams to plan day-to-day
           tasks while keeping the larger team goals in view.
         </p>
-        <button class="btn_get-started">Get Started</button>
+        <button class="btn_get-started btn2">Get Started</button>
       </article>
 
       <div class="intro-img">
@@ -44,34 +48,40 @@
       </div>
 
       <div class="advantages-items">
-        <div class="ad-item">
-          <span class="number-item">01</span>
-          <h3>Track company-wide progress</h3>
-          <p>
-            See how your day-to-day tasks fit into the wider vision. Go from
-            tracking progress at the milestone level all the way done to the
-            smallest of details. Never lose sight of the bigger picture again.
-          </p>
-        </div>
-        
-        <div class="ad-item">
-          <span class="number-item">02</span>
-          <h3>Advanced built-in reports</h3>
-          <p>
-            Set internal delivery estimates and track progress toward company 
-            goals. Our customisable dashboard helps you build out the reports 
-            you need to keep key stakeholders informed.
-          </p>          
-        </div>
+        <div>
+          <div class="ad-item">
+            <h3>
+              <span class="number-item">01</span>Track company-wide progress
+            </h3>
+            <p>
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way done to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
+          </div>
+          
+          <div class="ad-item">
+            <h3>
+              <span class="number-item">02</span>Advanced built-in reports
+            </h3>
+            <p>
+              Set internal delivery estimates and track progress toward company 
+              goals. Our customisable dashboard helps you build out the reports 
+              you need to keep key stakeholders informed.
+            </p>          
+          </div>
 
-        <div class="ad-item">
-          <span class="number-item">03</span>
-          <h3>Everything you need in one place</h3>
-          <p>
-            Stop jumping from one service to another to communicate, store files, 
-            track tasks and share documents. Manage offers an all-in-one team 
-            productivity solution.
-          </p>          
+          <div class="ad-item">
+            <h3>
+              <span class="number-item">03</span>Everything you need in one place
+            </h3>
+            <p>
+              Stop jumping from one service to another to communicate, store files, 
+              track tasks and share documents. Manage offers an all-in-one team 
+              productivity solution.
+            </p>          
+          </div>
+
         </div>
       </div>
     </section>
@@ -123,24 +133,34 @@
           </p>
         </div>
       </div>
-      <button class="btn_get-started">Get Started</button>
+      <button class="btn_get-started btn3">Get Started</button>
     </section>
+
+    <aside class="simplify-how">
+      <h1>Simplify how your team works today.</h1>
+      <button class="btn_get-started btn4">Get Started</button>
+    </aside>
   </main>
 
-  <aside class="simplify-how">
-    <h1>Simplify how your team works today.</h1>
-    <button class="btn_get-started">Get Started</button>
-  </aside>
-  
   <footer>
     <div class="logo-container">
       <img src="images/logo.svg" alt="logo">
       <div class="social">
-        <img src="images/icon-facebook.svg" alt="facebook">
-        <img src="images/icon-youtube.svg" alt="youtube">
-        <img src="images/icon-twitter.svg" alt="twitter">
-        <img src="images/icon-pinterest.svg" alt="pinterest">
-        <img src="images/icon-instagram.svg" alt="instagram">
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-pinterest"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
       </div>
     </div>
 
@@ -165,12 +185,5 @@
 
     <span>Copyright 2020. All Rights Reserved</span>
   </footer>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>

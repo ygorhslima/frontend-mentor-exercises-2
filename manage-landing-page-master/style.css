@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{    
+    --Orange400: hsl(12, 88%, 59%);
+    --Blue950: hsl(228, 39%, 23%);
+    --Gray950: hsl(233, 12%, 13%);
+    --Orange50: hsl(13, 100%, 96%);
+    --Gray50: hsl(0, 0%, 98%);
+    --font-padrao: "Be Vietnam Pro", sans-serif;
+}
+
+body{
+    font-family: var(--font-padrao);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+header .div-links .links{
+    text-decoration: none;
+    color: var(--Gray950);
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.8s;    
+}
+
+header .div-links .links:hover{
+    color: gray;
+}
+
+.btn_get-started{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+    background-color: var(--Orange400);
+    color: var(--Gray50);
+    cursor: pointer;
+    transition: 0.8s;
+}
+.btn_get-started:hover{
+    opacity: 0.8;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 0.2fr;
+}
+
+main #intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main #intro .intro-content{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+}
+main #intro .intro-content h1{
+    font-size: 3.7em;
+    margin-top: 30px;
+    color: var(--Gray950);
+}
+
+main #intro .intro-content p{
+    font-size: 1.3em;
+    margin: 10px;
+}
+
+main #intro .intro-content .btn2{
+    width: 40%;
+    margin: 10px;
+}
+
+main #advantages{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+main #advantages .advantages-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 10px;
+    width: 30%;
+}
+
+main #advantages .advantages-content h1{
+    font-size: 2.8em;
+}
+
+main #advantages .advantages-content p{
+    font-size: 1.3em;
+}
+
+main #advantages .advantages-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+} 
+main #advantages .advantages-items div{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 70%;
+} 
+main #advantages .advantages-items div .ad-item{
+    margin: 10px;
+    width: 100%;
+} 
+main #advantages .advantages-items div .ad-item h3 .number-item{
+    margin-right: 15px;
+    border-radius: 20px;
+    padding: 2px 20px;
+    background-color: var(--Orange400);
+}
+
+main #testimonials{
+
+}
+
+main #simplify-how{
+
+}
