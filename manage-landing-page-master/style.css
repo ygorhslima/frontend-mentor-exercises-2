@@ -80,7 +80,7 @@ main #intro .intro-content p{
 }
 
 main #intro .intro-content .btn2{
-    width: 40%;
+    width: 20%;
     margin: 10px;
 }
 
@@ -122,10 +122,12 @@ main #advantages .advantages-items div{
     margin: 10px;
     width: 70%;
 } 
+
 main #advantages .advantages-items div .ad-item{
     margin: 10px;
     width: 100%;
 } 
+
 main #advantages .advantages-items div .ad-item h3 .number-item{
     margin-right: 15px;
     border-radius: 20px;
@@ -134,9 +136,35 @@ main #advantages .advantages-items div .ad-item h3 .number-item{
 }
 
 main #testimonials{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-main #simplify-how{
+main #testimonials .testimonials-list {
+    display: flex;
+    width: 100%;
+    margin: 30px;
+    gap: 20px;
+}
+
+main #testimonials .testimonials-list .avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main .simplify-how{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Orange400);
+    background-image: url("images/bg-simplify-section-desktop.svg");
+}
+
+main .simplify-how h1{
 
 }
