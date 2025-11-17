@@ -140,11 +140,14 @@ main #testimonials{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-x:hidden;
 }
 
+/* Atualização para o contêiner dos depoimentos */
 main #testimonials .testimonials-list {
     display: flex;
-    width: 100%;
+    flex-wrap: nowrap;
+    width: fit-content;
     margin: 30px;
     gap: 20px;
 }
@@ -152,9 +155,9 @@ main #testimonials .testimonials-list {
 main #testimonials .testimonials-list .avatar-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    min-width: 50%;
 }
 
 main .simplify-how{
