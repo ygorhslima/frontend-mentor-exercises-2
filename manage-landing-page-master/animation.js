@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const distanceToMove = totalWidth / 2;
     
     // Duração ideal: Ajuste este valor para controlar a velocidade da rolagem.
-    const durationTime = 20; 
+    const durationTime = 30; 
 
     gsap.to(list, {
         // Move o contêiner para a esquerda pela largura do conjunto original (distanceToMove).
