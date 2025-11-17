@@ -163,25 +163,46 @@ main .simplify-how{
     align-items: center;
     background-color: var(--Orange400);
     background-image: url("images/bg-simplify-section-desktop.svg");
+    padding: 50px 40px;
 }
 
 main .simplify-how h1{
-
+    color: var(--Gray50);
+    font-size: 2.5em;
 }
 
 footer{
     display: flex;
     background-color: var(--Gray950);
     justify-content: space-between;
+    align-items: center;
     padding: 40px;
     text-decoration: none;
     color: var(--Gray50);
+}
+footer .logo-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+footer .logo-container .social{
+    height: 100%;
 }
 footer .logo-container .social i{
     text-decoration: none;
     color: var(--Gray50);
 }
+footer .footer-links{
+    display: flex;
+    gap: 20px;
+}
+footer .footer-links div{
+    display: flex;
+    flex-direction: column;
+}
 footer .footer-links div a{
     text-decoration: none;
     color: var(--Gray50);
+    margin-bottom: 3px;
 }
