@@ -38,6 +38,10 @@ header .div-links .links:hover{
     color: gray;
 }
 
+header .div-links-menu, .btn-menu{
+    display: none;
+}
+
 .btn_get-started{
     padding: 10px 20px;
     border-radius: 20px;

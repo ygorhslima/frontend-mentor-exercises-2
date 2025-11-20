@@ -19,6 +19,13 @@
     header {
         justify-content: space-between;
         padding: 40px 10px;
+        position: relative; /* Importante para que a logo e o botão de menu fiquem na frente do overlay */
+
+        justify-content: space-between;
+        padding: 40px 10px;
+    }
+    header .img, .btn-menu{
+        z-index: 1000;
     }
 
     header .div-links {
@@ -38,7 +45,47 @@
 
     /* O menu suspenso (mobile) que deve ser controlado via JS (adicionado apenas para estilização) */
     .div-links-menu {
+       position: fixed;
+       top:0;
+       left: 0;
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: flex-start;
+       z-index: 999;
        display: none;
+       background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.508));
+       transition: opacity 0.3s ease-in-out visibility 0.3s ease-in-out;
+    }
+
+    .div-links-menu div{
+        background-color: var(--Gray50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div-links-menu div a{
+        text-decoration: none;
+        color: var(--Gray950);
+    }
+    .div-links-menu.ativo{
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .div-links-menu .menu-content{
+        background-color: var(--Gray50);
+        width: 90%;
+        max-width: 350px;
+        padding: 30px 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        position: relative;
     }
     
     .div-links-menu .links {
