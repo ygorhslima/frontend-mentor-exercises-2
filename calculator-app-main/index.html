@@ -22,50 +22,57 @@
         <div class="themes">
           <p>theme</p>
           <div class="theme-switcher">
-              <input type="radio" id="theme1" name="theme-choice" value="1" checked>
-              <label for="theme1" class="theme-label">1</label>
+              <div class="toggle-container"> 
+                  <label for="theme1" class="theme-label">1</label>
+                  <label for="theme2" class="theme-label">2</label>
+                  <label for="theme3" class="theme-label">3</label>
 
-              <input type="radio" id="theme2" name="theme-choice" value="2">
-              <label for="theme2" class="theme-label">2</label>
-
-              <input type="radio" id="theme3" name="theme-choice" value="3">
-              <label for="theme3" class="theme-label">3</label>
+                  <input type="radio" id="theme1" name="theme-choice" value="1" checked>
+                  <input type="radio" id="theme2" name="theme-choice" value="2">
+                  <input type="radio" id="theme3" name="theme-choice" value="3">
+                  
+                  <div class="slider-ball"></div> 
+              </div>
           </div>
         </div>
       </div>
 
       <div class="display">
-        <p id="resultado">399,981</p>
+        <div id="resultado">399,981</div>
       </div>
 
       <div class="calc">
-        <div>
+        <div class="row-calc">
           <button class="btn">7</button>
           <button class="btn">8</button>
           <button class="btn">9</button>
           <button class="btn btn-del-reset">del</button> </div>
-        <div>
+        <div class="row-calc">
           <button class="btn">4</button>
           <button class="btn">5</button>
           <button class="btn">6</button>
           <button class="btn">+</button>
         </div>
-        <div>
+        <div class="row-calc">
           <button class="btn">1</button>
           <button class="btn">2</button>
           <button class="btn">3</button>
           <button class="btn">-</button>
         </div>
-        <div>
+        <div class="row-calc">
           <button class="btn">.</button>
           <button class="btn">0</button>
           <button class="btn">/</button>
           <button class="btn">*</button>
         </div>
-        <div class="row-footer"> <button class="btn btn-del-reset btn-large">reset</button> <button class="btn btn-equals btn-large">=</button> </div>
+        <div class="row-footer">
+          <button class="btn btn-del-reset btn-large">reset</button>
+          <button class="btn btn-equals btn-large">=</button>
+        </div>
       </div>
-
     </div>
+    
   </main>
+  <script src="scripts/theme-switcher.js"></script>
 </body>
 </html>

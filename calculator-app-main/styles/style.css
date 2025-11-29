@@ -5,6 +5,171 @@
     box-sizing: border-box;
 }
 
-body {
+body{
+    background-color: var(--clr-main-bg);
+    color: var( --clr-text-primary);
+    height: 100vh;
+}
+
+main{
     font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.calculadora{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 40%;
+    min-height: 50%;
+}
+.div-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+.div-title .themes{
+    display: flex;
+    gap: 10px;
+}
+.toggle-container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 997px;
+    background-color: var(--clr-toggle-keypad-bg);
+    width: 70px;
+    height: 25px;
+}
+/*esconder os inputs nativos*/
+.toggle-container input[type="radio"]{
+    display: none;
+}
+/*estilização dos números */
+.theme-label{
+    /*para os números 1,2,3 ficarem no topo*/
+    position: relative;
+    z-index: 2;
+    top: -120%;
+    text-align: center;
+    width: calc(100% / 3);
+    cursor: pointer;
+    color: var(--clr-text-primary);
+    font-size: 12px;
+}
+/*bolinha deslizante*/
+.slider-ball{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--clr-key-equals);
+    transition: transform 0.3s ease-in-out;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--clr-screen-bg);
+    padding: 30px 30px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+/* Container principal dos botões */
+.calc {
+    display: flex;
+    flex-direction: column; /* Para empilhar as linhas (row-calc e row-footer) verticalmente */
+    width: 100%;
+    background-color: var(--clr-toggle-keypad-bg);
+    padding: 20px; /* Aumentei um pouco o padding para espaçamento interno */
+    border-radius: 10px; /* Adicionei bordas arredondadas ao painel de botões */
+    gap: 20px; /* Espaço entre as linhas de botões */
+}
+
+/* Estilo para as linhas de botões (4 botões por linha) */
+.row-calc {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Espaço entre os botões na mesma linha */
+}
+
+/* Estilo para a linha do RESET e IGUAL */
+.row-footer {
+    display: flex;
+    width: 100%;
+    gap: 20px; /* Espaço entre os botões RESET e IGUAL */
+}
+
+/* Estilo base para todos os botões */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Permite que os itens flex (botões) se dividam igualmente na linha */
+    height: 60px; /* Altura fixa para botões */
+    border: none;
+    border-radius: 10px; /* Arredondamento da borda dos botões */
+    cursor: pointer;
+    /* Estilos de cor e sombra dependentes do tema (idealmente em root-themes.css) */
+    background-color: var(--clr-key-standard);
+    box-shadow: 0 4px 0 var(--clr-key-shadow-primary);
+    transition: transform 0.1s;
+}
+
+/* Botões de DEL e RESET */
+.btn-del-reset {
+    background-color: var(--clr-key-del-reset);
+    box-shadow: 0 4px 0 var(--clr-key-shadow-del-reset);
+    color: var(--clr-text-del-reset-equals);
+    font-size: 20px;
+}
+
+/* Botão de IGUAL */
+.btn-equals {
+    background-color: var(--clr-key-equals);
+    box-shadow: 0 4px 0 var(--clr-key-shadow-equals);
+    color: var(--clr-text-del-reset-equals);
+}
+
+/* Botões maiores (RESET e IGUAL) */
+.btn-large {
+    width: 100%;
+}
+
+p{
+    font-weight: var(--font-weight-bold);
+}
+button{
+    font-size: var(--font-size-numbers);
+    color: var(--clr-text-secondary);
+}
+
+/*se tema 1 for checado, movimente a bolinha para a primeira posição*/
+#theme1:checked ~ .slider-ball{
+    left: 5px;
+    transform: translateY(-50%) translateX(0);
+}
+/*se tema 2 for checado, movimente a bolinha para a segunda posição*/
+#theme2:checked ~ .slider-ball{
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+/*se tema 3 for checado, movimente a bolinha para a terceira posição*/
+#theme3:checked ~ .slider-ball{
+    left: 70%;
+    transform: translateY(-50%) translateX(0%);
 }
