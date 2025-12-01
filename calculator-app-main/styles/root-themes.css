@@ -1,3 +1,6 @@
+/* ---------------------------------- */
+/* THEME 1 (DEFAULT)      */
+/* ---------------------------------- */
 :root {
     /* ---------------------------------- */
     /* TYPOGRAPHY & FONT         */
@@ -6,30 +9,30 @@
     --font-weight-bold: 700;
     --font-size-numbers: 32px;
 
-    /* ---------------------------------- */
-    /* THEME 1 (DEFAULT)      */
-    /* ---------------------------------- */
-
     /* Backgrounds */
-    --clr-main-bg: hsl(222, 26%, 31%); /* Navy 850 (main background) */
-    --clr-toggle-keypad-bg: hsl(223, 31%, 20%); /* Navy 900 (toggle background, keypad background) */
-    --clr-screen-bg: hsl(224, 36%, 15%); /* Navy 950 (screen background) */
+    --clr-main-bg: hsl(222, 26%, 31%);
+    --clr-toggle-keypad-bg: hsl(223, 31%, 20%);
+    --clr-screen-bg: hsl(224, 36%, 15%);
 
-    /* Keys - Primary (DEL, RESET) */
-    --clr-key-del-reset: hsl(225, 21%, 49%); /* Navy 700 (key background) */
-    --clr-key-del-reset-shadow: hsl(224, 28%, 35%); /* Navy 800 (key shadow) */
+    /* Keys - DEL/RESET (Primárias) */
+    --clr-key-del-reset: hsl(225, 21%, 49%);
+    --clr-key-shadow-del-reset: hsl(224, 28%, 35%);
+    --clr-key-del-reset-hover: hsl(225, 21%, 65%); /* Cor de Hover: L de 49% para 65% */
 
     /* Keys - Equals (=) */
-    --clr-key-equals: hsl(6, 63%, 50%); /* Red 600 (key background, toggle) */
-    --clr-key-equals-shadow: hsl(6, 70%, 34%); /* Red 800 (key shadow) */
+    --clr-key-equals: hsl(6, 63%, 50%);
+    --clr-key-shadow-equals: hsl(6, 70%, 34%);
+    --clr-key-equals-hover: hsl(6, 63%, 70%); /* Cor de Hover: L de 50% para 70% */
     
-    /* Keys - Standard (Numbers, Operators) */
-    --clr-key-standard: hsl(0, 0%, 90%); /* Gray 200 (key background) */
-    --clr-key-standard-shadow: hsl(28, 16%, 65%); /* Gray orange 400 (key shadow) */
+    /* Keys - Standard (Números, Operadores) */
+    --clr-key-standard: hsl(0, 0%, 90%);
+    --clr-key-shadow-standard: hsl(28, 16%, 65%);
+    --clr-key-standard-hover: hsl(0, 0%, 100%); /* Cor de Hover: L de 90% para 100% (Branco total) */
 
     /* Text */
-    --clr-text-primary: hsl(0, 100%, 100%); /* White */
-    --clr-text-secondary: hsl(221, 14%, 31%); /* Navy 750 (For standard keys) */
+    --clr-text-primary: hsl(0, 100%, 100%);
+    --clr-text-secondary: hsl(221, 14%, 31%);
+    --clr-text-del-reset-equals: hsl(0, 100%, 100%);
 }
 
 /* ---------------------------------------------------- */
@@ -37,26 +40,30 @@
 /* ---------------------------------------------------- */
 .theme-2 {
     /* Backgrounds */
-    --clr-main-bg: hsl(0, 0%, 90%); /* Gray 200 */
-    --clr-toggle-keypad-bg: hsl(0, 5%, 81%); /* Gray 300 */
-    --clr-screen-bg: hsl(0, 0%, 93%); /* Gray 100 */
+    --clr-main-bg: hsl(0, 0%, 90%);
+    --clr-toggle-keypad-bg: hsl(0, 5%, 81%);
+    --clr-screen-bg: hsl(0, 0%, 93%);
 
-    /* Keys - Primary (DEL, RESET) */
-    --clr-key-del-reset: hsl(185, 42%, 37%); /* Blue 500 */
-    --clr-key-del-reset-shadow: hsl(185, 58%, 25%); /* Blue 600 */
+    /* Keys - DEL/RESET */
+    --clr-key-del-reset: hsl(185, 42%, 37%);
+    --clr-key-shadow-del-reset: hsl(185, 58%, 25%);
+    --clr-key-del-reset-hover: hsl(185, 42%, 55%); /* Cor de Hover: L de 37% para 55% */
 
     /* Keys - Equals (=) */
-    --clr-key-equals: hsl(25, 98%, 40%); /* Orange 700 (key background, toggle) */
-    --clr-key-equals-shadow: hsl(25, 99%, 27%); /* Orange 800 (key shadow) */
+    --clr-key-equals: hsl(25, 98%, 40%);
+    --clr-key-shadow-equals: hsl(25, 99%, 27%);
+    --clr-key-equals-hover: hsl(25, 98%, 55%); /* Cor de Hover: L de 40% para 55% */
 
-    /* Keys - Standard (Numbers, Operators) */
-    --clr-key-standard: hsl(0, 0%, 90%); /* Grey 200 */
-    --clr-key-standard-shadow: hsl(35, 11%, 61%); /* Grey orange 450 */
+    /* Keys - Standard */
+    --clr-key-standard: hsl(0, 0%, 90%);
+    --clr-key-shadow-standard: hsl(35, 11%, 61%);
+    --clr-key-standard-hover: hsl(0, 0%, 100%); /* Cor de Hover: Branco total */
 
     /* Text */
-    --clr-text-primary: hsl(60, 10%, 19%); /* Gray 900 (Main text color for light theme) */
-    --clr-text-secondary: hsl(60, 10%, 19%); /* Gray 900 (For DEL/RESET keys) */
-    --clr-text-equals: hsl(0, 100%, 100%); /* White (For equals key) */
+    --clr-text-primary: hsl(60, 10%, 19%);
+    --clr-text-secondary: hsl(60, 10%, 19%);
+    --clr-text-equals: hsl(0, 100%, 100%);
+    --clr-text-del-reset-equals: var(--clr-text-equals);
 }
 
 
@@ -65,25 +72,29 @@
 /* ---------------------------------------------------- */
 .theme-3 {
     /* Backgrounds */
-    --clr-main-bg: hsl(268, 75%, 9%); /* Purple 950 */
-    --clr-toggle-keypad-bg: hsl(268, 71%, 12%); /* Purple 900 */
-    --clr-screen-bg: hsl(268, 71%, 12%); /* Purple 900 (Screen background is the same) */
+    --clr-main-bg: hsl(268, 75%, 9%);
+    --clr-toggle-keypad-bg: hsl(268, 71%, 12%);
+    --clr-screen-bg: hsl(268, 71%, 12%);
 
-    /* Keys - Primary (DEL, RESET) */
-    --clr-key-del-reset: hsl(281, 89%, 26%); /* Purple 800 */
-    --clr-key-del-reset-shadow: hsl(285, 91%, 52%); /* Purple 400 */
+    /* Keys - DEL/RESET */
+    --clr-key-del-reset: hsl(281, 89%, 26%);
+    --clr-key-shadow-del-reset: hsl(285, 91%, 52%);
+    --clr-key-del-reset-hover: hsl(281, 89%, 40%); /* Cor de Hover: L de 26% para 40% */
 
     /* Keys - Equals (=) */
-    --clr-key-equals: hsl(176, 100%, 44%); /* Cyan 500 (key background, toggle) */
-    --clr-key-equals-shadow: hsl(177, 92%, 70%); /* Cyan 400 (key shadow) */
+    --clr-key-equals: hsl(176, 100%, 44%);
+    --clr-key-shadow-equals: hsl(177, 92%, 70%);
+    --clr-key-equals-hover: hsl(176, 100%, 65%); /* Cor de Hover: L de 44% para 65% */
 
-    /* Keys - Standard (Numbers, Operators) */
-    --clr-key-standard: hsl(268, 47%, 21%); /* Purple 850 */
-    --clr-key-standard-shadow: hsl(290, 70%, 36%); /* Purple 750 */
+    /* Keys - Standard */
+    --clr-key-standard: hsl(268, 47%, 21%);
+    --clr-key-shadow-standard: hsl(290, 70%, 36%);
+    --clr-key-standard-hover: hsl(268, 47%, 40%); /* Cor de Hover: L de 21% para 40% */
 
     /* Text */
-    --clr-text-primary: hsl(52, 100%, 62%); /* Yellow 300 (Main text color for numbers/screen) */
-    --clr-text-secondary: hsl(0, 100%, 100%); /* White (For DEL/RESET keys) */
-    --clr-text-standard: hsl(52, 100%, 62%); /* Yellow 300 (For standard keys) */
-    --clr-text-equals: hsl(198, 20%, 13%); /* Blue 950 (For equals key) */
+    --clr-text-primary: hsl(52, 100%, 62%);
+    --clr-text-secondary: hsl(0, 100%, 100%);
+    --clr-text-standard: hsl(52, 100%, 62%);
+    --clr-text-equals: hsl(198, 20%, 13%);
+    --clr-text-del-reset-equals: var(--clr-text-secondary); /* Usa o branco para DEL/RESET/IGUAL neste tema */
 }
