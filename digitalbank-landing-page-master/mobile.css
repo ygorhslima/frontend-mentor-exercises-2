@@ -1,0 +1,12 @@
+:root{
+    --Blue950: hsl(233, 26%, 24%);
+    --Green500: hsl(136, 64%, 51%);
+    --Cyan400: hsl(192, 69%, 51%);
+    --Gray600: hsl(233, 8%, 62%);
+    --Gray100: hsl(220, 16%, 96%);
+    --Gray50: hsl(0, 0%, 98%);
+    --White: hsl(0, 100%, 100%);
+}
+
+@media screen and (max-width:768px) {
+}
