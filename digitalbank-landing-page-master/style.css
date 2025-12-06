@@ -60,7 +60,7 @@ header nav a:hover{
     height: 100vh;
     width: 100%;
     font-size: 1.5em;
-    background-color: var(--Gray100); /* Usei Gray100, pois Gray60 não está definido */
+    background-color: var(--Gray50);
 }
 
 #intro .intro_content{
@@ -105,7 +105,8 @@ header nav a:hover{
 #latest_articles{
     padding: 80px 50px;
     display: grid;
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
+    background-color: var(--Gray50);
     gap: 30px;
 }
 
@@ -115,11 +116,64 @@ header nav a:hover{
 }
 
 #latest_articles .latest_articles_list .la-item{
+    background-color: var(--White);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
 }
 
 #latest_articles .latest_articles_list .la-item .la-image{
-    min-width: 100%;
+    width: 100%;
 }
 #latest_articles .latest_articles_list .la-item .la-image img{
     width: 100%;
+    border-radius: 20px;
+}
+
+#latest_articles .latest_articles_list .la-item span{
+    font-size: 0.7em;
+    color: var(--Gray600);
+}
+
+#latest_articles .latest_articles_list .la-item h4{
+    font-weight: 400;
+    margin: 5px 0px 5px 0px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Blue950);
+    padding: 30px;
+}
+
+footer .social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 25%;
+}
+footer .links .footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+footer .links .footer-link a{
+    color: var(--White);
+    margin: 10px;
+}
+footer .footer-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    color: var(--White);
 }
