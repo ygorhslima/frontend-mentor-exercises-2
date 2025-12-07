@@ -21,28 +21,23 @@
     }
     /* --- INTRO SECTION --- */
     #intro {
-        /* Muda a ordem dos itens: imagem no topo, conteúdo abaixo */
-        display: flex; /* Muda para flex para controle de ordem */
+        display: flex; 
         flex-direction: column-reverse; /* Conteúdo primeiro, depois imagem no HTML, mas imagem deve vir primeiro no mobile (a ordem foi invertida para acomodar o HTML existente) */
         text-align: center;
-        padding: 0; /* Remove o padding horizontal no container principal */
+        padding: 0;
         height: auto;
-        min-height: 100vh; /* Garante que a intro ocupe pelo menos a altura da tela, se necessário */
+        min-height: 100vh;
         padding-bottom: 50px;
-        overflow: hidden; /* Mantém o overflow hidden */
-
-        /* Novo Background para Mobile */
+        overflow: hidden;
         background-image: url('./images/bg-intro-mobile.svg');
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% auto;
     }
 
-    /* Conteúdo da esquerda (Next generation...) */
     #intro .intro_content {
-        padding: 0 24px; /* Adiciona padding lateral para o texto */
-        margin-top: 0; /* Remove o margin negativo usado no desktop */
-        z-index: 1;
+        padding: 0 24px;
+        margin-top: 80%;
     }
     #intro .intro_content h1 {
         font-size: 2.5rem; /* Ajuste o tamanho da fonte para mobile */
