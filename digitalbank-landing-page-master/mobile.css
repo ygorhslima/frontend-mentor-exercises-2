@@ -1,12 +1,141 @@
-:root{
-    --Blue950: hsl(233, 26%, 24%);
-    --Green500: hsl(136, 64%, 51%);
-    --Cyan400: hsl(192, 69%, 51%);
-    --Gray600: hsl(233, 8%, 62%);
-    --Gray100: hsl(220, 16%, 96%);
-    --Gray50: hsl(0, 0%, 98%);
-    --White: hsl(0, 100%, 100%);
-}
+@media screen and (max-width: 768px) {
+    /* --- HEADER E BOTÃO --- */
+    header {
+        padding: 20px 24px; /* Aumenta o padding do header para mobile */
+        /* O botão "Request Invite" deve ser escondido no header para o mobile,
+           pois ele geralmente aparece no menu hamburger ou é omitido */
+        justify-content: space-between; /* Garante que o logo fique na esquerda */
+    }
+    header .btn_request_invite {
+        display: none;
+    }
+    nav {
+        /* Oculta a navegação desktop */
+        display: none;
+    }
+    .btn_request_invite {
+        /* Garante que o botão Request Invite tenha largura total se for usado
+           fora do header no mobile (ex: no footer ou intro) */
+        width: auto;
+        margin: 20px 0;
+    }
+    /* --- INTRO SECTION --- */
+    #intro {
+        /* Muda a ordem dos itens: imagem no topo, conteúdo abaixo */
+        display: flex; /* Muda para flex para controle de ordem */
+        flex-direction: column-reverse; /* Conteúdo primeiro, depois imagem no HTML, mas imagem deve vir primeiro no mobile (a ordem foi invertida para acomodar o HTML existente) */
+        text-align: center;
+        padding: 0; /* Remove o padding horizontal no container principal */
+        height: auto;
+        min-height: 100vh; /* Garante que a intro ocupe pelo menos a altura da tela, se necessário */
+        padding-bottom: 50px;
+        overflow: hidden; /* Mantém o overflow hidden */
 
-@media screen and (max-width:768px) {
+        /* Novo Background para Mobile */
+        background-image: url('./images/bg-intro-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100% auto;
+    }
+
+    /* Conteúdo da esquerda (Next generation...) */
+    #intro .intro_content {
+        padding: 0 24px; /* Adiciona padding lateral para o texto */
+        margin-top: 0; /* Remove o margin negativo usado no desktop */
+        z-index: 1;
+    }
+    #intro .intro_content h1 {
+        font-size: 2.5rem; /* Ajuste o tamanho da fonte para mobile */
+    }
+
+    /* Imagem dos Mockups */
+    #intro .intro_image {
+        position: relative;
+        width: 100%;
+        height: 300px; /* Define uma altura para o container da imagem */
+        margin-top: 0; /* Remove o margin negativo */
+        margin-bottom: -120px; /* PUXA A IMAGEM PARA CIMA E SOBRE O BACKGROUND */
+    }
+    #intro .intro_image img {
+        /* Posiciona a imagem dos celulares sobre o background */
+        position: absolute;
+        top: -60px; /* Ajusta a posição da imagem sobre o background mobile */
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%; /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+    /* --- ADVANTAGES SECTION --- */
+    #advantages {
+        padding: 60px 24px;
+        text-align: center;
+    }
+    #advantages .advantage-content {
+        width: 100%; /* Ocupa a largura total */
+    }
+    #advantages .advantages-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px; /* Adiciona espaço entre os itens */
+        margin-top: 40px;
+    }
+    #advantages .advantages-list .item {
+        /* Garante que o texto dos itens de vantagem esteja centralizado */
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* --- LATEST ARTICLES SECTION --- */
+    #latest_articles {
+        padding: 60px 24px;
+        text-align: center;
+    }
+    #latest_articles .latest_articles_list {
+        flex-direction: column;
+        gap: 25px; /* Adiciona espaço entre os artigos */
+    }
+    #latest_articles .latest_articles_list .la-item {
+        width: 100%;
+        max-width: 350px; /* Limita a largura dos artigos para não ficarem muito grandes */
+        margin: 0 auto;
+    }
+    #latest_articles .latest_articles_list .la-item .la-content {
+        padding: 15px 20px 30px; /* Adiciona padding interno ao conteúdo */
+        text-align: left; /* Mantém o texto alinhado à esquerda dentro do item */
+    }
+    #latest_articles .latest_articles_list .la-item .la-image img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 24px;
+    }
+    footer .social {
+        order: 1; /* Coloca o social no topo */
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    footer .links {
+        order: 2; /* Coloca os links no meio */
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    footer .links .footer-link {
+        /* Remove o background-color: red; de depuração */
+        background-color: transparent; 
+        align-items: center;
+    }
+    footer .links .footer-link a {
+        margin: 5px 0; /* Ajusta o espaçamento dos links */
+    }
+    footer .footer-button {
+        order: 3; /* Coloca o botão e o copyright na parte inferior */
+        align-items: center;
+    }
 }
