@@ -1,7 +1,7 @@
 {
   "name": "frontend-mentor-exercises-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "- [insure-landing-page-master](https://ygorhslima.github.io/frontend-mentor-exercises-2/insure-landing-page-master) - [manage-landing-page-master](https://ygorhslima.github.io/frontend-mentor-exercises-2/manage-landing-page-master) - [calculator-app-main](https://ygorhslima.github.io/frontend-mentor-exercises-2/calculator-app-main)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ygorhslima/frontend-mentor-exercises-2/issues"
   },
-  "homepage": "https://github.com/ygorhslima/frontend-mentor-exercises-2#readme"
+  "homepage": "https://github.com/ygorhslima/frontend-mentor-exercises-2#readme",
+  "type": "module",
+  "dependencies": {
+    "gsap": "^3.14.2"
+  }
 }

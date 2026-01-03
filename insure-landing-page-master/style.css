@@ -19,7 +19,7 @@
     --body-font:"Karla", sans-serif;
 }
 
-h1, h2, h3, h4,h5,h6{
+h1, h2, h3, h4, h5, h6{
     font-family: var(--title-font);
 }
 body{
@@ -31,7 +31,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: white; /* ou var(--Gray50), se preferir */
+  background-color: white;
   z-index: 1000;
   padding: 20px 40px;
   display: flex;

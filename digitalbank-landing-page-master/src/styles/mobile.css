@@ -22,17 +22,13 @@
     /* --- INTRO SECTION --- */
     #intro {
         display: flex; 
-        flex-direction: column-reverse; /* Conteúdo primeiro, depois imagem no HTML, mas imagem deve vir primeiro no mobile (a ordem foi invertida para acomodar o HTML existente) */
+        flex-direction: column-reverse; 
         text-align: center;
         padding: 0;
         height: auto;
         min-height: 100vh;
         padding-bottom: 50px;
         overflow: hidden;
-        background-image: url('./images/bg-intro-mobile.svg');
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: 100% auto;
     }
 
     #intro .intro_content {
@@ -47,9 +43,10 @@
     #intro .intro_image {
         position: relative;
         width: 100%;
-        height: 300px; /* Define uma altura para o container da imagem */
-        margin-top: 0; /* Remove o margin negativo */
-        margin-bottom: -120px; /* PUXA A IMAGEM PARA CIMA E SOBRE O BACKGROUND */
+        height: 300px;
+        margin-top: 0;
+        margin-bottom: -120px;
+        background-size: 100vw 100vh;
     }
     #intro .intro_image img {
         /* Posiciona a imagem dos celulares sobre o background */

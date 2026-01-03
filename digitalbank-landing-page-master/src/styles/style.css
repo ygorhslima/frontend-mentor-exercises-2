@@ -15,31 +15,43 @@
     --White: hsl(0, 100%, 100%);
 }
 
-p{
-    color: var(--Gray600);
-}
-
-h1,h2,h4{
-    color: var(--Blue950);
-}
+p{color: var(--Gray600);}
+h1,h2,h4{color: var(--Blue950);}
+a{text-decoration: none;}
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 20px;
     background-color: var(--White);
 }
-a{
-    text-decoration: none;
+
+nav {
+  display: flex;
+  gap: 25px;
 }
-header nav a{
-    color: var(--Gray600);
-    margin-left: 15px;
-    padding: 10px;
+
+.links-header {
+  position: relative;
+  text-decoration: none;
+  color: var(--Gray600);
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1rem;
+  padding: 8px 0;
+  display: inline-block;
 }
-header nav a:hover{
-    border-bottom: 2px solid var(--Green500);
+
+.line-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px; /* Aumentei um pouco para ficar visível */
+  background: linear-gradient(to right, var(--Green500), var(--Cyan400)); /* Usei seu degradê para combinar com o botão */
+  transform: scaleX(0);
+  opacity: 1; /* Pode deixar em 1, o scaleX(0) já esconde */
+  pointer-events: none;
 }
 
 .btn_request_invite{
@@ -52,33 +64,42 @@ header nav a:hover{
 }
 /*--------------------------------intro---------------------------------*/
 #intro{
-    /* Remova background-size: cover; */
-    background-image: url('./images/bg-intro-desktop.svg');
-    background-repeat: no-repeat;
-    /* Ajuste o background-position para mover o fundo */
-    background-position: 100% 70%; /* Move o fundo para o canto superior direito, ajuste o segundo valor se precisar descer/subir */
-    background-size: 850px 850px; /* Defina um tamanho fixo grande para o fundo */
 
     display: grid;
-    grid-template-columns: 1.15fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
     gap: 40px;
-    align-items: center;
-    padding: 0 8%;
-    /* Reduza a altura ou use min-height para se ajustar ao conteúdo */
-    min-height: 550px; /* Uma altura mínima razoável */
-    padding-top: 50px; /* Adicione padding superior para dar espaço */
-    padding-bottom: 50px; /* Adicione padding inferior */
+    align-items: center; 
+    padding: 40px 50px;
     width: 100%;
-    font-size: 1.1em; /* Reduzi um pouco para o desktop */
+    font-size: 1.1em;
     background-color: var(--Gray50);
-    overflow: hidden; /* Importante para que a imagem do celular que se projeta para fora não cause barra de rolagem horizontal */
+    overflow: hidden;
 }
 
-/* Garanta que o conteúdo da esquerda comece mais alto */
 #intro .intro_content{
     padding: 20px 0;
-    margin-top: -60px; /* Ajuste para mover o conteúdo um pouco para cima */
-    z-index: 2; /* Certifique-se de que o texto esteja sobre o fundo */
+    z-index: 2;
+}
+
+#intro .intro_content h1{
+    font-size: 3.0em;
+    font-weight: 400;
+}
+
+#intro .intro_content p{
+    font-size: 1.0em;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+#intro .intro_image{
+    background-image: url('../images/bg-intro-desktop.svg');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+#intro .intro_image div img{
+    width: 100%;
+    height: auto;
 }
 
 /*-----------------------advantages------------------*/
@@ -90,11 +111,14 @@ header nav a:hover{
     grid-template-columns: 1fr; 
     justify-items: start;
 }
-#advantages .advantage-content{
-    width: 60%; 
+
+#advantages .advantage-content{ 
+    width: 100%; 
 }
+
 #advantages .advantages-list{
     display: grid;
+    justify-content: space-between;
     grid-template-columns: repeat(4, 1fr); 
     gap: 30px; 
     margin: 35px 0;
