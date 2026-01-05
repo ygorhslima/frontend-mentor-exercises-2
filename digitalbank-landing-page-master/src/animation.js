@@ -1,8 +1,12 @@
 
+// registrando o plugin scrollTrigger para animações que acontecem quando o usuário faz o scroll do mouse
 gsap.registerPlugin(ScrollTrigger)
 
+// quando o conteúdo do site for carregado
 document.addEventListener("DOMContentLoaded",()=>{
+    // obtendo os links que estão no header para criar a animação da borda suave
     const headerLinks = document.querySelectorAll(".links-header");
+    // animando link por link
     headerLinks.forEach(link => {
         let line = link.querySelector(".line-header");
 
@@ -12,10 +16,10 @@ document.addEventListener("DOMContentLoaded",()=>{
             link.appendChild(line);
         }
 
-        // animação usando gsap
+        // quando passar o mouse em cima do link ele vai fazer a animação
         link.addEventListener("mouseenter",()=>{
             gsap.to(line,{
-                scaleX:1,
+                scaleX:1, //
                 transformOrigin: "left",
                 duration:0.4,
                 ease:"power2.out",
@@ -23,6 +27,8 @@ document.addEventListener("DOMContentLoaded",()=>{
             })
         })
 
+
+        // quando passar o mouse em cima do link ele vai fazer a animação
         link.addEventListener("mouseleave",()=>{
             gsap.to(line,{
                 scaleX:0,
