@@ -31,7 +31,7 @@ header .div-links .links{
     color: var(--Gray950);
     margin: 10px;
     cursor: pointer;
-    transition: 0.8s;    
+    transition: 0.8s;
 }
 
 header .div-links .links:hover{

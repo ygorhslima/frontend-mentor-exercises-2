@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
    
     <title>Frontend Mentor | Digitalbank landing page</title>
 
@@ -20,15 +24,32 @@
       <div class="header-image">
         <img src="images/logo-dark.svg" alt="">
       </div>  
-      <nav>
+      <div class="links">
         <a href="#" class="links-header">Home</a>
         <a href="#" class="links-header">About</a>
         <a href="#" class="links-header">Contact</a>
         <a href="#" class="links-header">Blog</a>
         <a href="#" class="links-header">Careers</a>
-      </nav>
+      </div>
       <button class="btn_request_invite">Request Invite</button>
-  </header>
+      
+      <button class="btn-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    
+
+    <div class="div-links-menu">
+      <div class="menu-content">
+        <a href="#" class="links-header">Home</a>
+        <a href="#" class="links-header">About</a>
+        <a href="#" class="links-header">Contact</a>
+        <a href="#" class="links-header">Blog</a>
+        <a href="#" class="links-header">Careers</a>
+        <button class="btn_request_invite">Request Invite</button>
+      
+      </div>
+    </div>
 
   <main>
     <section id="intro">
@@ -202,5 +223,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
   <script type="module" src="animation.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
