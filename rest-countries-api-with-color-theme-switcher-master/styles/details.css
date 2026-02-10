@@ -1,0 +1,143 @@
+/* --- LAYOUT DA TELA DE DETALHES --- */
+
+:root {
+  /* Fontes */
+  --font-main: "Nunito Sans", sans-serif;
+  
+  /* Variáveis de Tema - LIGHT MODE (Padrão) */
+  --bg-color: hsl(0, 0%, 98%);         /* Background do site */
+  --text-color: hsl(200, 15%, 8%);      /* Texto principal */
+  --el-color: hsl(0, 100%, 100%);       /* Cards, Header, Inputs */
+  --input-placeholder: hsl(0, 0%, 52%); /* Texto do placeholder */
+  --shadow: 0 2px 9px rgba(0, 0, 0, 0.05);
+  
+  /* Utils */
+  --radius: 5px;
+}
+
+
+/* --- VARIÁVEIS PARA DARK MODE --- */
+body.dark-mode {
+  --bg-color: hsl(207, 26%, 17%);      /* Background Dark */
+  --text-color: hsl(0, 100%, 100%);     /* Texto Branco */
+  --el-color: hsl(209, 23%, 22%);       /* Elementos Dark */
+  --input-placeholder: hsl(0, 0%, 100%);
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#details-view {
+  padding: 0 5% 50px 5%; /* Adicionado padding inferior para não colar no fim da tela */
+  animation: fadeIn 0.3s ease-in;
+  
+  /* Mudança para fixed garante que cubra a tela toda mesmo com scroll */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  
+  /* Background obrigatório para não ver o que está atrás */
+  background-color: var(--bg-color); 
+  
+  /* Permite scroll dentro da tela de detalhes se o conteúdo for grande */
+  overflow-y: auto; 
+  z-index: 10000;
+}
+
+.btn-back {
+  background-color: var(--el-color);
+  color: var(--text-color);
+  padding: 10px 30px;
+  border-radius: var(--radius);
+  box-shadow: 0 0 7px rgba(0,0,0,0.29);
+  margin: 40px 0 80px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.details-content img {
+  width: 100%;
+  max-width: 560px; /* Tamanho da bandeira na imagem */
+  box-shadow: var(--shadow);
+}
+
+.details-text {
+  flex: 1;
+}
+
+.details-text h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Duas colunas de informações */
+.details-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.details-columns p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Border Countries */
+.border-countries {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.border-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.border-tag {
+  background-color: var(--el-color);
+  padding: 5px 25px;
+  font-size: 14px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  border-radius: 2px;
+}
+
+/* Utilitário para esconder telas */
+.hidden {
+  display: none !important;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+@media (max-width: 1024px) {
+  .details-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .details-columns {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .details-content img {
+    max-width: 100%;
+  }
+}

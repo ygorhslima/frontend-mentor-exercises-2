@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="stylesheet" href="./styles/details.css">
+
     <title>Rest Countries API</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,6 +53,13 @@
         </select>
       </div>
       <div id="lista-paises" class="container-cards"></div>
+
+       <section id="home-view">
+        <div class="container-filter-datas">.</div>
+        <div id="lista-paises" class="container-cards"></div>
+      </section>
+
+      <section id="details-view" class="hidden"></section>
     </main>
     <script type="module" src="scripts/script.js"></script>
   </body>
