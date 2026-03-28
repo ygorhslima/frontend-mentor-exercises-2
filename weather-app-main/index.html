@@ -1,66 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Weather app</title>
+    <title>Frontend Mentor | Weather app</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/logo.svg" alt="Weather Now" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <select name="units" id="units" class="select-units">
+        <option value="units">Units</option>
 
-  Units
+        <optgroup label="Temperature">
+          <option value="Celsius">Celsius (°C)</option>
+          <option value="Fahrenheit">Fahrenheit (°F)</option>
+        </optgroup>
 
-  Switch to Imperial/Metric
+        <optgroup label="Wind Speed">
+          <option value="Kmh">Km/h</option>
+          <option value="mph">mph</option>
+        </optgroup>
 
-  Temperature
+        <optgroup label="Precipitation">
+          <option value="Millimeters">Millimeters</option>
+          <option value="Inches">Inches (in)</option>
+        </optgroup>
+      </select>
+    </header>
 
-  Celsius (°C)
-  Fahrenheit (°F)
+    <main>
+      <section class="search-section">
+        <h1 class="search-title">How's the sky looking today?</h1>
 
-  Wind Speed
+        <div class="search-container">
+          <span>
+            <img src="assets/images/icon-search.svg" alt="" />
+            <input
+              type="text"
+              id="search-place"
+              placeholder="Search for a place..."
+            />
+          </span>
 
-  km/h
-  mph
+          <button class="search-button">Search</button>
+        </div>
+      </section>
 
-  Precipitation
+      <section class="weather-section">
+        <div class="weather-card-info">
+          <div class="info">
+            <h3>Berlin, Germany</h3>
+            <p>Tuesday, Aug 5, 2025</p>
+          </div>
+          <div class="weather">
+            <img src="assets/images/icon-sunny.webp" alt="icon-sunny" />
+            <p class="temperature">20°</p>
+          </div>
+        </div>
 
-  Millimeters (mm)
-  Inches (in)
+        <div class="weather-card-info-details">
+          <div class="card">
+            <p class="card-info">Feels Like</p>
+            <span class="card-temperature">18°</span>
+          </div>
 
-  How's the sky looking today?
+          <div class="card">
+            <p class="card-info">Humidity</p>
+            <span class="card-humidity">46%</span>
+          </div>
 
-  Search for a city, e.g., New York
-  Search
+          <div class="card">
+            <p class="card-info">Wind</p>
+            <span class="card-wind">14 km/h</span>
+          </div>
 
-  Feels like
-  <!-- Insert temperature here -->
+          <div class="card">
+            <p class="card-info">Precipitation</p>
+            <span class="card-precipitation">0 mm</span>
+          </div>
+        </div>
 
-  Humidity
-  <!-- Insert humidity here -->
+        <div class="weather-daily-forecast">
+          <div>
+            <p>Tue</p>
+            <img src="assets/images/icon-rain.webp" alt="" />
+          </div>
+          <div>
+            <p>Wed</p>
+            <img src="assets/images/icon-drizzle.webp" alt="" />
+          </div>
+          <div>
+            <p>Thu</p>
+            <img src="assets/images/icon-sunny.webp" alt="" />
+          </div>
+          <div>
+            <p>Fri</p>
+            <img src="assets/images/icon-partly-cloudy.webp" alt="" />
+          </div>
+          <div>
+            <p>Sat</p>
+            <img src="assets/images/icon-storm.webp" alt="" />
+          </div>
+          <div>
+            <p>Sun</p>
+            <img src="assets/images/icon-snow.webp" alt="" />
+          </div>
+          <div>
+            <p>Mon</p>
+            <img src="assets/images/icon-fog.webp" alt="" />
+          </div>
+        </div>
 
-  Wind
-  <!-- Insert wind here -->   
-  
-  Precipitation
-  <!-- Insert precipitation here -->
+        <div class="weather-hourly-forecast">
+          <div>
+            <h4>Hourly forecast</h4>
+            <select name="" id=""></select>
+          </div>
 
-  Daily forecast
-  <!-- Insert daily forecast for the next 7 days here -->
-
-  Hourly forecast
-  <!-- Insert hourly forecast for the selected day here -->
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+          <div>
+            <img src="assets/images/icon-" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
