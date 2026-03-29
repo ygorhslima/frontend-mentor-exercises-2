@@ -17,7 +17,7 @@
     <header>
       <img src="assets/images/logo.svg" alt="Weather Now" />
 
-      <select name="units" id="units" class="select-units">
+      <select name="units" id="units" class="all-select">
         <option value="units">Units</option>
 
         <optgroup label="Temperature">
@@ -42,15 +42,14 @@
         <h1 class="search-title">How's the sky looking today?</h1>
 
         <div class="search-container">
-          <span>
+          <div>
             <img src="assets/images/icon-search.svg" alt="" />
             <input
               type="text"
               id="search-place"
               placeholder="Search for a place..."
             />
-          </span>
-
+          </div>
           <button class="search-button">Search</button>
         </div>
       </section>
@@ -89,48 +88,109 @@
           </div>
         </div>
 
+        <div class="title">
+          <h4>Daily forecast</h4>
+        </div>
         <div class="weather-daily-forecast">
-          <div>
+          <div class="weather-forecast-days">
             <p>Tue</p>
             <img src="assets/images/icon-rain.webp" alt="" />
+            <p class="min">68°</p>
+            <p class="max">57°</p>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Wed</p>
             <img src="assets/images/icon-drizzle.webp" alt="" />
+            <div>
+              <p class="min">70°</p>
+              <p class="max">59°</p>
+            </div>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Thu</p>
             <img src="assets/images/icon-sunny.webp" alt="" />
+            <div>
+              <p class="min">75°</p>
+              <p class="max">57°</p>
+            </div>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Fri</p>
             <img src="assets/images/icon-partly-cloudy.webp" alt="" />
+            <div>
+              <p class="min">77°</p>
+              <p class="max">55°</p>
+            </div>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Sat</p>
             <img src="assets/images/icon-storm.webp" alt="" />
+            <div>
+              <p class="min">70°</p>
+              <p class="max">59°</p>
+            </div>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Sun</p>
             <img src="assets/images/icon-snow.webp" alt="" />
+            <div>
+              <p class="min">77°</p>
+              <p class="max">61°</p>
+            </div>
           </div>
-          <div>
+
+          <div class="weather-forecast-days">
             <p>Mon</p>
             <img src="assets/images/icon-fog.webp" alt="" />
+            <p>75°</p>
+            <p>69°</p>
           </div>
         </div>
 
         <div class="weather-hourly-forecast">
-          <div>
+          <div class="title">
             <h4>Hourly forecast</h4>
-            <select name="" id=""></select>
+            <select name="days" id="days" class="all-select">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
           </div>
-
-          <div>
-            <img src="assets/images/icon-" alt="" />
+          <div class="card-weather-hourly-forecast">
+            <div class="card">
+              <div>
+                <img src="assets/images/icon-overcast.webp" alt="3 PM" />
+                <p>3 PM</p>
+              </div>
+              <p>68°</p>
+            </div>
+            <div class="card">
+              <div>
+                <img src="assets/images/icon-partly-cloudy.webp" alt="" />
+                <p>4 PM</p>
+              </div>
+              <p>68°</p>
+            </div>
+            <div class="card">
+              <div>
+                <img src="assets/images/icon-sunny.webp" alt="" />
+                <p>5 PM</p>
+              </div>
+              <p>66°</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="script/script.js"></script>
   </body>
 </html>
