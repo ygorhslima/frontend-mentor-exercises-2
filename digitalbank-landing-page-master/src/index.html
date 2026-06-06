@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/mobile.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>Frontend Mentor | Digitalbank landing page</title>
-
 </head>
 <body>
-  <header>
-      <div class="header-image">
-        <img src="images/logo-dark.svg" alt="">
-      </div>  
-      <div class="links">
-        <a href="#" class="links-header">Home</a>
-        <a href="#" class="links-header">About</a>
-        <a href="#" class="links-header">Contact</a>
-        <a href="#" class="links-header">Blog</a>
-        <a href="#" class="links-header">Careers</a>
-      </div>
-      <button class="btn_request_invite">Request Invite</button>
-      
-      <button class="btn-menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </header>
-    
 
-    <div class="div-links-menu">
+  <header>
+    <div class="header-image">
+      <img src="images/logo-dark.svg" alt="Digitalbank logo">
+    </div>
+
+    <!-- Menu único de navegação -->
+    <nav class="nav-menu">
       <div class="menu-content">
         <a href="#" class="links-header">Home</a>
         <a href="#" class="links-header">About</a>
         <a href="#" class="links-header">Contact</a>
         <a href="#" class="links-header">Blog</a>
         <a href="#" class="links-header">Careers</a>
-        <button class="btn_request_invite">Request Invite</button>
-      
+        <!-- Botão visível APENAS dentro do menu mobile -->
+        <button class="btn_request_invite mobile-only">Request Invite</button>
       </div>
-    </div>
+    </nav>
+
+    <!-- Botão visível APENAS no Desktop -->
+    <button class="btn_request_invite desktop-only">Request Invite</button>
+    
+    <!-- Botão do menu hambúrguer para o Mobile -->
+    <button class="btn-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
 
   <main>
     <section id="intro">
@@ -61,20 +55,20 @@
       </div>
       
       <div class="intro_image">
-       <div>
-          <img src="images/image-mockups.png" alt="">
+        <div>
+          <img src="images/image-mockups.png" alt="Mockups de smartphones">
         </div>
       </div>
     </section>
 
     <section id="advantages">
       <div class="advantage-content">
-        <h2>Why choose Digitalbank?</h1>
+        <h2>Why choose Digitalbank?</h2>
         <p>
           We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.
         </p>
         <div class="advantages-list">
-          <!--CONTEÚDO GERADO NO JS-->
+          <!-- CONTEÚDO GERADO NO JS -->
         </div>
       </div>
     </section>
@@ -82,50 +76,52 @@
     <aside id="latest_articles">
       <h2>Latest Articles</h2>
       <div class="latest_articles_list">
-        <!--CONTEÚDO GERADO NO JS-->
+        <!-- CONTEÚDO GERADO NO JS -->
       </div>
     </aside>
   </main>
 
   <footer>
-      <div class="social">
-        <div class="img-footer">
-          <img src="images/logo-light.svg" alt="logo">
-        </div>
-        <div>
-          <a href="#">
-            <img src="images/icon-facebook.svg" alt="facebook">
-          </a>
-          <a href="#">
-            <img src="images/icon-youtube.svg" alt="youtube">
-          </a>
-          <a href="#">
-            <img src="images/icon-twitter.svg" alt="twitter">
-          </a>
-          <a href="#">
-            <img src="images/icon-pinterest.svg" alt="pinterest">
-          </a>
-          <a href="#">
-            <img src="images/icon-instagram.svg" alt="instagram">
-          </a>
-        </div>
+    <div class="social">
+      <div class="img-footer">
+        <img src="images/logo-light.svg" alt="logo light">
       </div>
-      <div class="links">
-        <div class="footer-link">
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
-          <a href="#">Blog</a>
-        </div>
-        <div class="footer-link">
-          <a href="#">Careers</a>
-          <a href="#">Support</a>
-          <a href="#">Privacy Policy</a>
-        </div>
+      <div>
+        <a href="#" aria-label="Facebook">
+          <img src="images/icon-facebook.svg" alt="facebook">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="images/icon-youtube.svg" alt="youtube">
+        </a>
+        <a href="#" aria-label="Twitter">
+          <img src="images/icon-twitter.svg" alt="twitter">
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <img src="images/icon-pinterest.svg" alt="pinterest">
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img src="images/icon-instagram.svg" alt="instagram">
+        </a>
       </div>
-      <div class="footer-button">
-        <button class="btn_request_invite">Request Invite</button>
-        <span>© Digitalbank. All Rights Reserved</span>
+    </div>
+    
+    <div class="links">
+      <div class="footer-link">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
       </div>
+      <div class="footer-link">
+        <a href="#">Careers</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+    
+    <div class="footer-button">
+      <button class="btn_request_invite">Request Invite</button>
+      <span>© Digitalbank. All Rights Reserved</span>
+    </div>
   </footer>
 
   <script src="script.js" type="module"></script>
