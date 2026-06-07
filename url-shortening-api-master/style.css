@@ -1,0 +1,125 @@
+/*
+
+### Primary
+
+- Blue 400: hsl(180, 66%, 49%)
+- Purple 950: hsl(257, 27%, 26%)
+
+### Secondary
+
+- Red 400: hsl(0, 87%, 67%)
+
+### Neutral
+
+--Gray400: hsl(0, 0%, 75%);
+--Gray500: hsl(257, 7%, 63%);
+--Gray900: hsl(255, 11%, 22%);
+--Gray950: hsl(260, 8%, 14%);
+*/
+
+:root {
+  --Blue400: hsl(180, 66%, 49%);
+  --Purple950: hsl(257, 27%, 26%);
+  ---Red400: hsl(0, 87%, 67%);
+  --Gray400: hsl(0, 0%, 75%);
+  --Gray500: hsl(257, 7%, 63%);
+  --Gray900: hsl(255, 11%, 22%);
+  --Gray950: hsl(260, 8%, 14%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+header .menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .menu a{
+    text-decoration: none;
+    color: var(--Gray500);
+    margin: 10px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro .info{
+    width: 40%;
+}
+.intro .info h1{
+    font-size: 60px;
+    color: var(--Gray900);
+}
+.intro .info p{
+    margin-bottom: 15px;
+}
+.img-intro img{
+    width: 100%;
+    object-fit: cover;
+} 
+
+.btn-get-started{
+    background-color: var(--Blue400);
+    color:white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn-get-started:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+section.search{
+    display: flex;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--Purple950);
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    
+    background-image:url('images/bg-shorten-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.search input,button{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.search button{
+    background-color: var(--Blue400);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+.search button:hover{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
