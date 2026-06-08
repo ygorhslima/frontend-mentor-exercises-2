@@ -1,22 +1,3 @@
-/*
-
-### Primary
-
-- Blue 400: hsl(180, 66%, 49%)
-- Purple 950: hsl(257, 27%, 26%)
-
-### Secondary
-
-- Red 400: hsl(0, 87%, 67%)
-
-### Neutral
-
---Gray400: hsl(0, 0%, 75%);
---Gray500: hsl(257, 7%, 63%);
---Gray900: hsl(255, 11%, 22%);
---Gray950: hsl(260, 8%, 14%);
-*/
-
 :root {
   --Blue400: hsl(180, 66%, 49%);
   --Purple950: hsl(257, 27%, 26%);
@@ -34,92 +15,235 @@
   font-family: "Poppins", sans-serif;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+header .menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .menu a {
+  text-decoration: none;
+  color: var(--Gray500);
+  margin: 10px;
+}
 
-}
-header .menu{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-header .menu a{
-    text-decoration: none;
-    color: var(--Gray500);
-    margin: 10px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-main{
-    display: flex;
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro .info {
+  width: 40%;
+}
+.intro .info h1 {
+  font-size: 60px;
+  color: var(--Gray900);
+}
+.intro .info p {
+  margin-bottom: 15px;
+}
+.img-intro img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn-get-started {
+  background-color: var(--Blue400);
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn-get-started:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.search {
+  display: flex;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: var(--Purple950);
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search input,
+button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.search button {
+  background-color: var(--Blue400);
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.search button:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+.advanced-statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(240, 39%, 95%);
+  padding: 100px 10px 220px 10px; /* Aumentei o padding-bottom de 100px para 180px */
+  width: 100%;
+}
+.container-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+  margin: 100px auto 0 auto;
+  align-items: start;
+  position: relative;
+}
+.container-items::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: var(--Blue400);
+  z-index: 1;
+}
+
+/* 3. Ajustando os cards para ficarem NA FRENTE da linha */
+.container-items .item {
+  background-color: white;
+  color: var(--Gray950);
+  padding: 40px 30px;
+  border-radius: 5px;
+  position: relative; /* Necessário para ativar o z-index */
+  z-index: 2; /* Fica por cima da linha (que tem z-index: 1) */
+}
+
+#item1 {
+  transform: translateY(0px);
+}
+#item2 {
+  transform: translateY(40px);
+}
+#item3 {
+  transform: translateY(80px);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--Purple950);
+  color: white;
+  padding: 40px;
+  background-image: url("images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+aside .content-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  background-color: var(--Gray950);
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  color: white;
+}
+footer .div-links {
+  display: flex;
+  gap: 20px;
+}
+footer .div-links div {
+  display: flex;
+  flex-direction: column;
+}
+footer .div-links div a {
+  text-decoration: none;
+  color: var(--Gray400);
+}
+footer .social {
+  display: flex;
+  gap: 10px;
+}
+footer .social .social-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+footer .social .social-link .icon {
+  transition: all 1s ease-in-out;
+  border-radius: 100%;
+  font-size: 20px;
+}
+footer .social .social-link .icon:hover {
+  color: var(--Blue400);
+}
+
+@media screen and (max-width: 768px) {
+  header .div-links {
+    display: none;
+  }
+
+  main .intro {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.intro{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.intro .info{
-    width: 40%;
-}
-.intro .info h1{
-    font-size: 60px;
-    color: var(--Gray900);
-}
-.intro .info p{
-    margin-bottom: 15px;
-}
-.img-intro img{
+  }
+  main .intro .info {
     width: 100%;
-    object-fit: cover;
-} 
-
-.btn-get-started{
-    background-color: var(--Blue400);
-    color:white;
-    font-weight: bold;
-    border-radius: 20px;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.btn-get-started:hover{
-    opacity: 0.7;
-    transform: scale(1.1);
-}
-
-section.search{
-    display: flex;
-    padding: 40px;
-    border-radius: 20px;
-    background-color: var(--Purple950);
-    width: 80%;
-    margin: auto;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    
-    background-image:url('images/bg-shorten-desktop.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.search input,button{
-    padding: 10px;
+  }
+  main .intro .info h1 {
+    font-size: 40px;
+  }
+  .advanced-statistic .container-items {
+    display: flex;
+    flex-direction: column;
+  }
+  footer, .div-links, footer .div-links div {
+    flex-direction: column;
+    text-align: center;
+  }
+  .div-links{
     margin: 10px;
-    border: none;
-    border-radius: 5px;
-}
-.search button{
-    background-color: var(--Blue400);
-    color: white;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-.search button:hover{
-    opacity: 0.7;
-    transform: scale(1.1);
+  }
+  .social{
+    margin-top: 20px;
+  }
 }
