@@ -5,8 +5,8 @@ const footerLinks = [
       { text: "How we work", url: "#" },
       { text: "Why insure?", url: "#" },
       { text: "view plans", url: "#" },
-      { text: "reviews", url: "#" }
-    ]
+      { text: "reviews", url: "#" },
+    ],
   },
   {
     category: "Help me",
@@ -14,25 +14,25 @@ const footerLinks = [
       { text: "faq", url: "#" },
       { text: "Terms of use", url: "#" },
       { text: "Privacy policy", url: "#" },
-      { text: "cookies", url: "#" }
-    ]
+      { text: "cookies", url: "#" },
+    ],
   },
   {
     category: "Contact",
     links: [
       { text: "sales", url: "#" },
       { text: "support", url: "#" },
-      { text: "live chat", url: "#" }
-    ]
+      { text: "live chat", url: "#" },
+    ],
   },
   {
     category: "Others",
     links: [
       { text: "careers", url: "#" },
       { text: "press", url: "#" },
-      { text: "licenses", url: "#" }
-    ]
-  }
+      { text: "licenses", url: "#" },
+    ],
+  },
 ];
 
 export default footerLinks;

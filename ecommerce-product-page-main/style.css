@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --Orange: hsl(26, 100%, 55%);
+  --PaleOrange: hsl(25, 100%, 94%);
+  --VeryDarkBlue: hsl(220, 13%, 13%);
+  --DarkGrayishBlue: hsl(219, 9%, 45%);
+  --GrayishBlue: hsl(220, 14%, 75%);
+  --LightGrayishBlue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --font-main: "Kumbh Sans", sans-serif;
+}
+
+/* Reset básico moderno */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--White);
+  font-family: var(--font-main);
+  color: var(--DarkGrayishBlue);
+  line-height: 1.6;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+.user-actions {
+  display: flex;
+  gap: 15px;
+  margin: 10px;
+}
+.user-actions .profile img {
+  width: 60%;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--DarkGrayishBlue);
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--VeryDarkBlue);
+}
+
+/* Main Layout */
+.product-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+/* Gallery */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.thumbnail-list {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumbnail-list button {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.thumbnail-list button:hover {
+  outline: 2px solid var(--Orange);
+  opacity: 0.6;
+}
+
+.thumbnail-list img {
+  display: block;
+  width: 100%;
+}
+
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+.product-details h1 {
+  color: var(--VeryDarkBlue);
+  font-size: 2.5rem;
+}
+
+.product-details .price-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-details .price-container .current-price {
+  font-weight: bold;
+}
+
+.product-details .price-container .current-price .price {
+  color: var(--Black);
+}
+
+.product-details .price-container .current-price .discount {
+  padding: 0px 10px 0px 10px;
+  border-radius: 20px;
+  color: var(--White);
+  background-color: var(--VeryDarkBlue);
+}
+
+.product-details .price-container .original-price{
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+.purchase-controls{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.purchase-controls .quantity-selector{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--LightGrayishBlue);
+  font-size: 20px;
+  text-align: center;
+  width: 40%;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+#btn-remove-item span, #btn-add-item span{
+  color: var(--Orange);
+  font-size: 30px;
+}
+
+
+#btn-add-to-cart
+{
+  background-color: var(--Orange);
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+}
