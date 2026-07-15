@@ -186,3 +186,36 @@ button {
   border-radius: 10px;
   width: 60%;
 }
+
+.cart-modal{
+  display: none;
+  position: absolute;
+  left: 75%;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 4px var(--Black);
+  font-size: 15px;
+}
+
+.cart-modal.active{
+  display: block;
+}
+
+.cart-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cart-item img{
+  width: 25%;
+  height: 25%;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+
+#btn-delete{
+  width: 30%;
+}
