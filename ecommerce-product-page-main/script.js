@@ -1,3 +1,6 @@
+import { productImages } from "./listImagesShoes.js";
+import { addQuantityItem, removeQuantityItem } from "./utils.js";
+
 // Seleção de elementos
 const txtDiscountedPrice = document.querySelector(".price");
 const txtTitle = document.querySelector("h1");
@@ -11,19 +14,18 @@ const cartContent = document.querySelector(".cart-content");
 const cartModal = document.querySelector(".cart-modal");
 const btnCart = document.querySelector(".btn-cart");
 
+// seleção dos elementos no DOM das imagens dinâmicas
+const mainImage = document.querySelector(".main-image img");
+const thumbnailButtons = document.querySelectorAll(".thumbnail-list button");
+
 let quantity = 0;
 
-// --- Lógica de Quantidade ---
 btnRemoveItem.addEventListener("click", () => {
-  if (quantity > 0) {
-    quantity--;
-    txtQuantity.textContent = quantity;
-  }
+  quantity = removeQuantityItem(quantity, txtQuantity);
 });
 
 btnAddItem.addEventListener("click", () => {
-  quantity++;
-  txtQuantity.textContent = quantity;
+  quantity = addQuantityItem(quantity, txtQuantity);
 });
 
 // --- Lógica do Carrinho ---
@@ -68,4 +70,17 @@ btnCart.addEventListener("click", (evt) => {
   cartModal.classList.toggle("active");
   const isHidden = cartModal.getAttribute("aria-hidden") == "true";
   cartModal.setAttribute("aria-hidden", !isHidden);
+});
+
+
+thumbnailButtons.forEach((button, index)=>{
+  button.addEventListener("click",(e)=>{
+    const clickedId = Number(e.currentTarget.dataset.id);
+    console.log(clickedId)
+    const selectedProduct = productImages.find(item => item.id == clickedId);
+    if(selectedProduct){
+      mainImage.src = selectedProduct.main;
+      mainImage.alt = selectedProduct.alt;
+    }
+  })
 });
